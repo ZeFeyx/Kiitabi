@@ -1,0 +1,22 @@
+﻿<style>
+	* { 
+		direction: rtl;
+	}
+	
+	input, textarea {
+		display: block;
+		font-size: 18px;
+		margin-bottom: 20px;
+	}
+</style>
+<form action="/update/<%= @book[:id] %>" method="post">
+	اسم الكتاب:
+		<input type="text" name="title" value="<%= @book[:title] %>">
+	اسم المؤلف:
+		<input type="text" name="author" value="<%= @book[:author] %>">
+	وصف الكتاب:
+		<textarea name="description" rows="10" cols="40"><%= @book[:description] %></textarea>
+	ملاحظات على الكتاب:
+		<textarea name="notes" rows="10" cols="40"><%= @book[:notes] %></textarea>
+	<input type="submit" value="تعديل بيانات الكتاب">
+</form>

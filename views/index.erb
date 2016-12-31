@@ -1,0 +1,9 @@
+﻿<h1>قائمة كتبي</h1>
+<% @books.each do |b| %>
+	<h4><%= b[:title] %></h4>
+	<p><%= b[:author] %>
+	<p><%= b[:description] %></p>
+	<a href="/delete/<%= b[:id] %>">حذف الكتاب</a>
+	<a href="/edit/<%= b[:id] %>">تعديل الكتاب</a>	
+	<hr />
+<% end %>
